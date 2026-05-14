@@ -3,8 +3,6 @@ import {
   Line,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
 } from "recharts"
 
 import {
@@ -24,9 +22,16 @@ function App() {
         fontFamily: "Arial",
       }}
     >
-      <h1 style={{ marginBottom: "2rem" }}>
+      <h1
+        style={{
+          marginBottom: "2rem",
+          textAlign: "center",
+        }}
+      >
         Hanging Hat Brewery Dashboard
       </h1>
+
+      {/* DASHBOARD CARDS */}
 
       <div
         style={{
@@ -43,6 +48,8 @@ function App() {
           />
         ))}
       </div>
+
+      {/* TAPLIST */}
 
       <h2
         style={{
@@ -81,46 +88,49 @@ function App() {
           </div>
         ))}
       </div>
-
-      <h2
-        style={{
-          marginTop: "3rem",
-          textAlign: "center",
-          fontWeight: "bold",
-        }}
-      >
-        Fermentation Tracking
-      </h2>
-
       <div
-        style={{
-          backgroundColor: "#222",
-          padding: "1rem",
-          borderRadius: "10px",
-          marginTop: "1rem",
-          width: "fit-content",
-        }}
-      >
-        <LineChart
-          width={600}
-          height={300}
-          data={fermentationData}
-        >
-          <CartesianGrid stroke="#444" />
+  style={{
+    backgroundColor: "#222",
+    padding: "1rem",
+    borderRadius: "10px",
+    marginTop: "1rem",
+  }}
+>
+  <LineChart
+  width={600}
+  height={300}
+  data={fermentationData}
+>
+  <XAxis dataKey="day" />
+  <YAxis dataKey="temp" />
 
-          <XAxis dataKey="day" />
-
-          <YAxis />
-
-          <Tooltip />
-
-          <Line
-            type="monotone"
-            dataKey="temp"
-            stroke="#f59e0b"
-          />
-        </LineChart>
-      </div>
+  <Line
+    type="monotone"
+    dataKey="temp"
+    stroke="orange"
+    strokeWidth={3}
+    dot={{
+      r: 6,
+      fill: "orange",
+    }}
+    label={{
+      position: "top",
+      fill: "white",
+      fontSize: 12,
+      offset: 15,
+    }}
+  />
+</LineChart>
+<p
+  style={{
+    textAlign: "left",
+    marginTop: "1rem",
+    color: "#ccc",
+  }}
+  >
+    Bittersweet Bitter Fermentation
+    </p>
+</div>
     </div>
   )
 }
