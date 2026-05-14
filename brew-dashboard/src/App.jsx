@@ -94,8 +94,20 @@ function App() {
     padding: "1rem",
     borderRadius: "10px",
     marginTop: "1rem",
+    display: "flex",
+    justifyContent: "center",
   }}
 >
+  <h2
+    style={{
+      marginTop: "3rem",
+      textAlign: "center",
+      fontWeight: "bold",
+    }}
+    >
+    Fermentation Tracking: <h5>Bittersweet Bitter</h5>
+    </h2>
+
   <LineChart
   width={600}
   height={300}
@@ -121,15 +133,6 @@ function App() {
     }}
   />
 </LineChart>
-<p
-  style={{
-    textAlign: "left",
-    marginTop: "1rem",
-    color: "#ccc",
-  }}
-  >
-    Bittersweet Bitter Fermentation
-    </p>
 </div>
     </div>
   )
