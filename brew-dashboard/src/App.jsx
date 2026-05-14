@@ -1,45 +1,4 @@
-const dashboardStats = [
-  {
-    title: "Active Batches",
-    value: "4 Brewing",
-  },
-  {
-    title: "Beers On Tap",
-    value: "6 Active",
-  },
-  {
-    title: "Low Kegs",
-    value: "2 Need Attention",
-  },
-  {
-    title: "Next Brew Day",
-    value: "Saturday",
-  },
-]
-
-const taplist = [
-  {
-    name: "Old Tavern Bitter",
-    style: "English Bitter",
-    abv: "4.4%",
-    kegLevel: "0%",
-    status: "Kicked!"
-  },
-  {
-    name: "Smoke & Oak",
-    style: "Grodziskie",
-    abv: "3.6%",
-    kegLevel: "28%",
-    status: "Low",
-  },
-  {
-    name: "Dark Mild",
-    style: "English Mild",
-    abv: "3.8%",
-    kegLevel: "54%",
-    status: "On Tap",
-  },
-]
+import { dashboardStats, taplist } from "./data/mockData"
 
 function App() {
   return (
