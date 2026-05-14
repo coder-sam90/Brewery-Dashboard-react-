@@ -95,7 +95,7 @@ _(Coming Soon)_
 Clone the repo:
 
 ```bash
-git clone https://github.com/YOURNAME/brewery-dashboard.git
+git clone https://github.com/coder-sam90/brewery-dashboard.git
 ```
 
 Install dependencies:
