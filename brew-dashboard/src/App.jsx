@@ -1,4 +1,18 @@
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from "recharts"
+
 import { dashboardStats, taplist } from "./data/mockData"
+import {
+  dashboardStats,
+  taplist,
+  fermentationData,
+} from "./data/mockData"
 
 function App() {
   return (
