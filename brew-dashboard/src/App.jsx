@@ -107,7 +107,31 @@ function App() {
     >
     Fermentation Tracking: <h5>Bittersweet Bitter</h5>
     </h2>
-
+  <div
+    style={{
+      backgroundColor: "#222",
+      padding: "1rem",
+      borderRadius: "10px",
+      marginTop: "1rem",
+      position: "relative",
+    }}
+    >
+      <p 
+        style={{
+          textAlign: "right",
+          marginBottom: "0.5rem",
+          color: "white",
+          fontWeight: "bold",
+          fontSize: 14,
+          transform: "rotate(-90deg)",
+          left: "0.5px",
+          top: "80px",
+          position: "absolute",
+        }}
+        >
+        Temperature(F)
+        </p>
+  </div>
   <LineChart
   width={600}
   height={300}
