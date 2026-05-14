@@ -7,7 +7,6 @@ import {
   Tooltip,
 } from "recharts"
 
-import { dashboardStats, taplist } from "./data/mockData"
 import {
   dashboardStats,
   taplist,
@@ -25,7 +24,7 @@ function App() {
         fontFamily: "Arial",
       }}
     >
-      <h1 style={{ marginBottom: "2rem", fontWeight: "bold" }}>
+      <h1 style={{ marginBottom: "2rem" }}>
         Hanging Hat Brewery Dashboard
       </h1>
 
@@ -45,7 +44,15 @@ function App() {
         ))}
       </div>
 
-      <h2 style={{ marginTop: "3rem", textAlign: "left", fontWeight: "bold" }}>Taplist</h2>
+      <h2
+        style={{
+          marginTop: "3rem",
+          textAlign: "center",
+          fontWeight: "bold",
+        }}
+      >
+        Taplist
+      </h2>
 
       <div
         style={{
@@ -73,6 +80,46 @@ function App() {
             <span>{beer.status}</span>
           </div>
         ))}
+      </div>
+
+      <h2
+        style={{
+          marginTop: "3rem",
+          textAlign: "center",
+          fontWeight: "bold",
+        }}
+      >
+        Fermentation Tracking
+      </h2>
+
+      <div
+        style={{
+          backgroundColor: "#222",
+          padding: "1rem",
+          borderRadius: "10px",
+          marginTop: "1rem",
+          width: "fit-content",
+        }}
+      >
+        <LineChart
+          width={600}
+          height={300}
+          data={fermentationData}
+        >
+          <CartesianGrid stroke="#444" />
+
+          <XAxis dataKey="day" />
+
+          <YAxis />
+
+          <Tooltip />
+
+          <Line
+            type="monotone"
+            dataKey="temp"
+            stroke="#f59e0b"
+          />
+        </LineChart>
       </div>
     </div>
   )
