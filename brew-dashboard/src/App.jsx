@@ -100,8 +100,8 @@ function App() {
 >
   <h2
     style={{
-      marginTop: "3rem",
-      textAlign: "center",
+      marginTop: "2rem",
+      textAlign: "left",
       fontWeight: "bold",
     }}
     >
@@ -129,7 +129,7 @@ function App() {
       position: "top",
       fill: "white",
       fontSize: 12,
-      offset: 15,
+      offset: 10,
     }}
   />
 </LineChart>
